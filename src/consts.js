@@ -1,6 +1,6 @@
-const ZoomItemKey = "zoomItem"
+const RoomItemKey = "zoomItem"
 const SearchItemKey = "searchItem"
 
 const SearchBaseUrl = "http://localhost:8080"
 
-export {ZoomItemKey, SearchItemKey, SearchBaseUrl}
+export {RoomItemKey, SearchItemKey, SearchBaseUrl}

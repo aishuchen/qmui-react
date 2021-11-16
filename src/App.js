@@ -1,9 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SideBar from './Sidebar';
 import { Container, Row, Col } from 'reactstrap';
-import { PlayerContainer, SearchContainer, ZoomContainer } from './Body'
+import { PlayerContainer, SearchContainer, RoomContainer } from './Body'
 import React from 'react';
-import { SearchItemKey, ZoomItemKey } from './consts';
+import { SearchItemKey, RoomItemKey } from './consts';
+import { Alert } from "./Alert"
 
 class App extends React.Component {
   playerRef = React.createRef()
@@ -18,20 +19,16 @@ class App extends React.Component {
     this.setState({ selectedItem: selected })
   }
 
-  notifyToPlay(songmid) {
-    this.playerRef.current.prePlay(songmid)
-  }
-
   renderBody() {
     switch (this.state.selectedItem) {
       case SearchItemKey: {
         return <SearchContainer father={this}/>
       }
-      case ZoomItemKey: {
-        return <ZoomContainer />
+      case RoomItemKey: {
+        return <RoomContainer />
       }
       default: {
-        return <ZoomContainer />
+        return <RoomContainer />
       }
     }
   }

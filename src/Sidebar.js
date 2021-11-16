@@ -1,17 +1,17 @@
 import react from "react";
 import { ListGroup, ListGroupItem } from "reactstrap";
-import { SearchItemKey, ZoomItemKey } from "./consts";
+import { SearchItemKey, RoomItemKey } from "./consts";
 
 class SideBarGroup extends react.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			seletedItem: ZoomItemKey
+			seletedItem: RoomItemKey
 		}
 		this._itemsProperty = [{
 			group: this,
 			content: "房间",
-			key: ZoomItemKey
+			key: RoomItemKey
 		}, {
 			group: this,
 			content: "搜索",
